@@ -1,8 +1,6 @@
-.menu1 {
-    background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+#main1 {
+  color: blue;
+  font-size: 20px;
 }
 header, footer {
   background-color: #9debf5;
