@@ -1,5 +1,85 @@
 #menu1 {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+    border-radius: 10px;
+    padding: 0 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#menu1 > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+}
+
+#menu1 > ul > li {
+    position: relative;
+}
+
+#menu1 > ul > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#menu1 > ul > li > a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для подменю */
+#menu1 > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(110, 72, 170, 0.95);
+    min-width: 200px;
+    z-index: 100;
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 5px 0 0 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+#menu1 > ul > li > ul > li > a {
+    display: block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#menu1 > ul > li > ul > li > a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 25px;
+}
+
+/* Показываем подменю при наведении */
+#menu1 > ul > li:hover > ul {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+/*#menu1 {
+    font-family: Arial;
     background-color: #333;
 }
 
@@ -57,7 +137,7 @@
 /* Показываем подменю при наведении */
 #menu1 > ul > li:hover > ul {
     display: block;
-}
+}*/
 main {
   padding: 10px;
   background-color: silver;
