@@ -3,6 +3,7 @@
     background: #6e48aa;
     border-radius: 8px;
     padding: 0 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 #menu1 > ul {
