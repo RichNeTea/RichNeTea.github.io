@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+
+
+
+<nav id="menu1">
+    <ul>
+        <li><a href="#top">Главная</a></li>
+        <li><a href="#m2">О нас</a></li>
+        <li><a href="#m3">Купить</a>
+            <ul>
+                <li><a href="#m3_1">Наушники</a></li>
+                <li><a href="#m3_2">Клавиатуры</a></li>
+                <li><a href="#m3_3">Мониторы</a></li>
+                <li><a href="index2.html">Готовые сборки</a></li> 
+                <li><a href="https://github.com/RichNeTea"></i> Своя сборка</a></li>
+            </ul>
+        </li>
+        <li><a href="index4.html">Конфигуратор</a></li>
+        <li><a href="#m5">Соц сети</a>
+            <ul class="social-dropdown">
+                <li><a href="https://github.com/RichNeTea"><i class="fab fa-vk"></i> ВКонтакте</a></li>
+                <li><a href="https://github.com/RichNeTea"><i class="fab fa-telegram"></i> Telegram</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<title>Покупка окна</title>
+
+
+<link rel="stylesheet" href="style5.css" />
+
+
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+
+
+<nav id="menu1">
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="#">Каталог</a></li>
+    <li><a href="#">Контакты</a></li>
+  </ul>
+</nav>
+
+
+<div class="purchase-container">
+  <h2>Оформление покупки</h2>
+  <form id="purchaseForm">
+    <label for="fullName">ФИО</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Иван Иванов" required />
+
+    <label for="address">Адрес доставки</label>
+    <input type="text" id="address" name="address" placeholder="г. Москва, ул. Ленина, д. 10, кв. 5" required />
+
+    <label for="cardNumber">Номер карты</label>
+    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" required />
+
+    <div class="small-inputs">
+      <div>
+        <label for="expiry">Срок действия (ММ/ГГ)</label>
+        <input type="text" id="expiry" name="expiry" placeholder="12/25" pattern="\d{2}/\d{2}" maxlength="5" required />
+      </div>
+      <div>
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" name="cvv" placeholder="123" maxlength="3" pattern="\d{3}" required />
+      </div>
+    </div>
+
+    <button type="submit">Купить</button>
+  </form>
+  <div class="success-message" id="successMessage">Спасибо за покупку! Ваш заказ принят.</div>
+</div>
+
+<script>
+  // Форматирование номера карты с пробелами каждые 4 цифры
+  const cardInput = document.getElementById('cardNumber');
+  cardInput.addEventListener('input', (e) => {
+    let value = e.target.value.replace(/\D/g, '');
+    value = value.match(/.{1,4}/g)?.join(' ') || '';
+    e.target.value = value;
+  });
+
+  const form = document.getElementById('purchaseForm');
+  const successMessage = document.getElementById('successMessage');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+
+</script>
+
+</body>
+</html>
